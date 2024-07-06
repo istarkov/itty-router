@@ -55,6 +55,14 @@ describe(`SPECIFIC TESTS: AutoRouter`, () => {
         expect(response.status).toBe(418)
       })
 
+      it('missing: RouteHandler - receives request as the first parameter', async () => {
+        const missing = vi.fn(() => {})
+        const router = AutoRouter({ missing })
+        const request = toReq('/')
+        await router.fetch(request)
+        expect(missing).toBeCalledWith(request)
+      })
+      
       it('before: RouteHandler - adds upstream middleware', async () => {
         const handler = vi.fn(r => typeof r.date)
         const router = AutoRouter({

@@ -24,7 +24,7 @@ export const AutoRouter = <
   catch: error,
   finally: [
     // @ts-ignore
-    (r: any, ...args) => r ?? missing(r, ...args),
+    (r: any, ...args) => r ?? missing(...args),
     format,
     ...f,
   ],
