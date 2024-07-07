@@ -1,4 +1,4 @@
-import { StatusError } from 'StatusError'
+import { StatusError } from '../StatusError'
 import { ErrorHandler } from './ErrorHandler'
 import { IRequest } from './IRequest'
 import { IttyRouterType } from './IttyRouterType'

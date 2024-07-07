@@ -2,7 +2,6 @@
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
     "declaration": true,
     "sourceMap": true,
     "esModuleInterop": true,
@@ -12,15 +11,13 @@
     "listFiles": false,
     "noFallthroughCasesInSwitch": true,
     "pretty": true,
-    // "moduleResolution": "nodeNext",  // disabled to be compatible with module: "esnext"
-    // "resolveJsonModule": true,       // disabled to be compatible with module: "esnext"
     "rootDir": "src",
     "skipLibCheck": true,
     "strict": true,
     "traceResolution": false,
     "outDir": "",
     "target": "esnext",
-    "module": "esnext",
+    "module": "Preserve",
     "types": ["@cloudflare/workers-types", "@types/node"]
   },
   "exclude": ["node_modules", "dist", "**/*.spec.ts", "examples"],
